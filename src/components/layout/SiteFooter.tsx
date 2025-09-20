@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 
 /**
@@ -11,10 +12,20 @@ export default function SiteFooter() {
       <Container className="py-12">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
-            <h3 className="font-bebas text-2xl text-chontaduro-gold tracking-wider">
-              Cali SAP Tech
-            </h3>
-            <p className="font-inter mt-2 text-gray-300">
+            <div className="flex items-center gap-4">
+              <Image
+                src="/cali-stamp.png"
+                alt="Stamp of Santiago de Cali"
+                width={60}
+                height={60}
+                className="opacity-80"
+                style={{ height: "auto" }}
+              />
+              <h3 className="font-bebas text-2xl text-chontaduro-gold tracking-wider">
+                Cali SAP Tech
+              </h3>
+            </div>
+            <p className="font-inter mt-4 text-gray-300">
               El Alma Digital of the SAP Technical Research Group of Cali.
             </p>
           </div>

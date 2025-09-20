@@ -11,7 +11,7 @@ import Cta from "@/components/sections/Cta";
 export default function Page() {
   return (
     <main>
-      <Hero />
+      <Hero variant="formal" />
       <PastEvent />
       <Founders />
       <Cta />

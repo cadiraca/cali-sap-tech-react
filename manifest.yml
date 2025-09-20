@@ -1,0 +1,8 @@
+---
+applications:
+  - name: cali-sap-tech-web
+    path: .
+    buildpack: nodejs_buildpack
+    command: npm run start
+    memory: 256M
+    random-route: true
