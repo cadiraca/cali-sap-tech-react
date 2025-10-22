@@ -18,7 +18,7 @@ export default function Founders() {
           Founders
         </h2>
         <p className="text-center text-lg text-charcoal max-w-2xl mx-auto mt-4 font-inter">
-          The people shaping Cali SAP Tech.
+          The people shaping Cali SAP Tech.  We are &apos;La nueva Mafia&apos;
         </p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">

@@ -1,12 +1,13 @@
 import Hero from "@/components/sections/Hero";
 import PastEvent from "@/components/sections/PastEvent";
 import Founders from "@/components/sections/Founders";
+import Projects from "@/components/sections/Projects";
 import Cta from "@/components/sections/Cta";
 
 /**
  * Home Page (Server Component)
  * - Composes presentational sections.
- * - Interactive behavior is encapsulated within client components (e.g., Founders modal).
+ * - Interactive behavior is encapsulated within client components (e.g., Founders modal, Projects modal).
  */
 export default function Page() {
   return (
@@ -14,6 +15,7 @@ export default function Page() {
       <Hero variant="formal" />
       <PastEvent />
       <Founders />
+      <Projects />
       <Cta />
     </main>
   );

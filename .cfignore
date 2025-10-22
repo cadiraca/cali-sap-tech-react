@@ -1,0 +1,140 @@
+# Cloud Foundry Ignore File
+# This file excludes files and directories from being uploaded to Cloud Foundry
+# to speed up deployment and reduce app size
+
+# Version Control
+.git/
+.gitignore
+.gitattributes
+.gitmodules
+
+# Dependencies (will be installed during staging)
+node_modules/
+.pnp/
+.pnp.*
+.yarn/
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Development files (exclude source files, keep built app structure)
+# Note: .next/ contains the built application and is needed for production
+src/
+out/
+coverage/
+.nyc_output/
+
+# Configuration files (development)
+.eslintrc*
+eslint.config.*
+.prettierrc*
+prettier.config.*
+tsconfig.json
+tsconfig.*.json
+next.config.ts
+next.config.js
+tailwind.config.*
+postcss.config.*
+*.tsbuildinfo
+next-env.d.ts
+
+# Environment files (security)
+.env*
+.environment
+
+# IDE and Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+.classpath
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Runtime data
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# Test files and directories
+test/
+tests/
+__tests__/
+*.test.*
+*.spec.*
+jest.config.*
+cypress/
+cypress.json
+
+# Documentation
+README*
+CHANGELOG*
+LICENSE*
+docs/
+doc/
+
+# Build tools and configuration
+webpack.config.*
+rollup.config.*
+vite.config.*
+babel.config.*
+.babelrc*
+
+# Linting
+.eslintcache
+.stylelintcache
+
+# Package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+.npmrc
+.yarnrc*
+
+# Temporary files
+tmp/
+temp/
+.tmp/
+
+# Miscellaneous
+*.tgz
+*.tar.gz
+.cache/
+.parcel-cache/
+.vercel/
+
+# Security scanning
+.snyk
+
+# Deployment specific (keep only production build)
+build/static/js/*.map
+build/static/css/*.map
