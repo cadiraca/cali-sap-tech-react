@@ -1,6 +1,7 @@
 import Hero from "@/components/sections/Hero";
 import PastEvent from "@/components/sections/PastEvent";
 import Founders from "@/components/sections/Founders";
+import CommunityNotes from "@/components/sections/CommunityNotes";
 import Projects from "@/components/sections/Projects";
 import Cta from "@/components/sections/Cta";
 
@@ -15,6 +16,7 @@ export default function Page() {
       <Hero variant="formal" />
       <PastEvent />
       <Founders />
+      <CommunityNotes />
       <Projects />
       <Cta />
     </main>
