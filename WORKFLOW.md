@@ -31,6 +31,8 @@ export default function Page() {
       <Hero variant="formal" />
       <PastEvent />
       <Founders />
+      <CommunityNotes />
+      <Projects />
       <Cta />
     </main>
   );
@@ -65,6 +67,8 @@ src/
 │   │   ├── Hero.tsx       # Hero section with animations
 │   │   ├── PastEvent.tsx  # Event display section
 │   │   ├── Founders.tsx   # Founder profiles section
+│   │   ├── CommunityNotes.tsx  # Learning topics calendar
+│   │   ├── Projects.tsx   # Project showcase section
 │   │   └── Cta.tsx        # Call-to-action section
 │   └── ui/                # Reusable UI components
 │       ├── Avatar.tsx     # User avatar component
@@ -75,7 +79,9 @@ src/
 │       └── Modal.tsx      # Modal dialogs
 ├── data/                  # Static data and content
 │   ├── events.ts          # Event data structure
-│   └── founders.ts        # Founder information
+│   ├── founders.ts        # Founder information
+│   ├── projects.ts        # Project showcase data
+│   └── communityTopics.ts # AI learning topics/initiatives
 ├── lib/                   # Utility functions
 │   └── cn.ts              # className utility (clsx + tailwind-merge)
 └── types/                 # TypeScript type definitions
@@ -707,18 +713,52 @@ cf app cali-sap-tech-web
 memory: 512M  # Increase from 256M if needed
 ```
 
+## 🎓 Community Features
+
+### Learning Topics
+
+The website includes a Learning Topics section (`src/components/sections/CommunityNotes.tsx`) where community members can propose and contribute to AI-focused learning initiatives.
+
+#### Key Features:
+- **Interactive Calendar**: Browse topics by date
+- **Clickable Topics**: Each topic opens a detailed modal with full information
+- **AI-Focused Content**: Topics cover Claude API, RAG, prompt engineering, and more
+- **HTML Vibe Coding**: Topics support rich HTML content for creative presentations
+
+#### Adding New Topics:
+See [COMMUNITY_TOPICS_GUIDE.md](./COMMUNITY_TOPICS_GUIDE.md) for detailed instructions on:
+- Proposing new learning initiatives
+- Using the "Propose Topic" form in the UI
+- HTML content patterns and best practices
+- AI-assisted topic generation
+
+#### Data Structure:
+```typescript
+// src/data/communityTopics.ts
+export type CommunityTopic = {
+  id: string;
+  date: string; // ISO format: YYYY-MM-DD
+  title: string;
+  author: string;
+  content: string; // HTML content
+  tags?: string[];
+};
+```
+
 ## 📞 Support & Resources
 
 ### Internal Resources
 - **Primary Maintainer**: Carlos Diego Ramírez
 - **Community Slack**: #cali-sap-tech-dev
 - **Issue Tracking**: GitHub Issues
+- **Learning Topics Guide**: [COMMUNITY_TOPICS_GUIDE.md](./COMMUNITY_TOPICS_GUIDE.md)
 
 ### External Documentation
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 - [TypeScript Handbook](https://www.typescriptlang.org/docs/)
 - [Cloud Foundry Documentation](https://docs.cloudfoundry.org/)
+- [Anthropic API Documentation](https://docs.anthropic.com/)
 
 ### Recommended Learning Resources
 - [React TypeScript Cheatsheet](https://react-typescript-cheatsheet.netlify.app/)
@@ -727,7 +767,7 @@ memory: 512M  # Increase from 256M if needed
 
 ---
 
-**Last Updated**: January 2025  
-**Document Version**: 1.0  
+**Last Updated**: April 2026
+**Document Version**: 1.1
 
 For questions or suggestions regarding this workflow, please create an issue in the repository or reach out to the development team through our community channels.

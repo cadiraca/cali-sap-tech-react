@@ -20,6 +20,9 @@ export default function SiteHeader() {
           <Link href="#founders" className="text-charcoal hover:text-chontaduro-gold transition-colors duration-300">
             Founders
           </Link>
+          <Link href="#community-notes" className="text-charcoal hover:text-chontaduro-gold transition-colors duration-300">
+            Learning Topics
+          </Link>
           <Link href="#join" className="bg-chontaduro-gold text-charcoal font-bold py-2 px-4 rounded-lg hover:bg-opacity-90 transition-transform transform hover:scale-105">
             Join Us
           </Link>

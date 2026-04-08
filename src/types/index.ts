@@ -40,3 +40,14 @@ export type Project = {
   team?: string[];
   image?: string;
 };
+
+export type CommunityTopic = {
+  id: string;
+  /** ISO date string e.g., 2026-04-07 */
+  date: string;
+  title: string;
+  /** HTML content for creative vibe coding presentations */
+  content: string;
+  author: string;
+  tags?: string[];
+};
